@@ -35,7 +35,7 @@ end
 function love.update(dt)
     elapsedTime = elapsedTime + dt
 
-    if (elapsedTime > 0.5) then
+    if (elapsedTime > 0.3) then
         if (splashCurrFPS < 6) then
             splashCurrFPS = splashCurrFPS + 1
         else
@@ -46,7 +46,12 @@ function love.update(dt)
     end
 end
 
-function love.exit()
 
+function love.keypressed(key)
+    if key == "escape" then
+        love.event.quit()
+    end
+    if key == "home" then
+        love.event.quit()
+    end
 end
-
